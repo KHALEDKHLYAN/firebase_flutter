@@ -1,4 +1,4 @@
-import 'package:firebase_flutter/app.dart';
+import 'package:firebase_flutter/src/features/authentication/screens/splash_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(brightness: Brightness.light,primarySwatch: Colors.deepPurple),
       darkTheme: ThemeData(brightness: Brightness.dark),
       themeMode: ThemeMode.system,
-      home: const MyHomePage(),
+      home: const SplashScreen(),
     );
   }
 }
