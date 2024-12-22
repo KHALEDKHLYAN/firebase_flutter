@@ -13,6 +13,20 @@ const String signUpSubTittle = 'Create Your Profile to Start Your Journey With U
 const String fullName = 'Full Name';
 const String phoneNumber = 'Phone Number';
 
+//Forget Password
+const String forgetPassWordTitle = 'Make Selection.';
+const String forgetPassWordSubTitle = 'Select One of the Options Given Below to reset your Password';
+const String resetPasswordViaEmail = 'Reset Password via E-mail Verification';
+const String restPasswordviaPhone = 'Rest password via Phone-Number';
+const String forgetPhoneSubTitle = 'Enter Your registered Phone Number to receive OTP';
+const String forgetEmailSubTitle = 'Enter Your registered Email to receive OTP';
+
+
+
+
+
+
+
 
 
 

@@ -1,6 +1,10 @@
+// ignore_for_file: prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 import '../../../../../constants/sizes.dart';
 import '../../../../../constants/text_strings.dart';
+import '../../forgetpassword/forgetpassword_option/forget_password_btn.dart';
+import '../../forgetpassword/forgetpassword_option/forget_password_screen.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({
@@ -35,20 +39,21 @@ class _LoginFormState extends State<LoginForm> {
                 hintText: passWordText,
                 border: OutlineInputBorder(),
                 suffixIcon: IconButton(
-                    onPressed: null,
-                    icon: Icon(Icons.remove_red_eye_rounded))),
+                    onPressed: null, icon: Icon(Icons.remove_red_eye_rounded))),
           ),
           SizedBox(height: formHeight - 20),
           Align(
             alignment: Alignment.centerRight,
             child: TextButton(
-                onPressed: () {}, child: Text(forgetPassWordText)),
+                onPressed: () {
+                  ForgetPasswordScreen.forgetPasswordContainer(context);
+                },
+                child: Text(forgetPassWordText)),
           ),
           SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                  onPressed: () {},
-                  child: Text(loginText.toUpperCase())))
+                  onPressed: () {}, child: Text(loginText.toUpperCase())))
         ],
       ),
     ));
