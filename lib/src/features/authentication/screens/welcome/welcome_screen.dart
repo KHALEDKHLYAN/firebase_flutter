@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import '../../../../constants/image_string.dart';
 import '../../../../constants/sizes.dart';
 import '../login/login.dart';
+import '../signup/signup_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -37,7 +38,8 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                   Expanded(
                       child: ElevatedButton(
-                          onPressed: () {}, child: Text("SignUp"))),
+                          onPressed: () => Get.to(() => SignupScreen()),
+                          child: Text("SignUp"))),
                 ]),
               ])),
     );
