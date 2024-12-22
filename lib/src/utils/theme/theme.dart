@@ -1,3 +1,7 @@
+import 'package:firebase_flutter/src/utils/theme/elevated_button_theme.dart';
+import 'package:firebase_flutter/src/utils/theme/outlined_button_theme.dart';
+import 'package:firebase_flutter/src/utils/theme/text_field_theme.dart';
+import 'package:firebase_flutter/src/utils/theme/text_theme.dart';
 import 'package:flutter/material.dart';
 
 class AppTheme {
@@ -15,6 +19,16 @@ class AppTheme {
       800: Color(0xCCFFE200),
       900: Color(0xE6FFE200),
     }),
+    elevatedButtonTheme: TElevatedButtonTheme.lighElevatedButtonTheme,
+    outlinedButtonTheme: TOutlinedButtonTheme.lightOutlinedButtonTheme,
+    inputDecorationTheme: CTextFFormFieldTheme.lightInputDecorationTheme,
+    textTheme: TTextTheme.lightTextTheme,
   );
-  static ThemeData darkTheme = ThemeData(brightness: Brightness.dark);
+  static ThemeData darkTheme = ThemeData(
+    brightness: Brightness.dark,
+    textTheme: TTextTheme.darkTextTheme,
+    elevatedButtonTheme: TElevatedButtonTheme.darkElevatedButtonTheme,
+    outlinedButtonTheme: TOutlinedButtonTheme.darkOutlinedButtonTheme,
+    inputDecorationTheme: CTextFFormFieldTheme.darkInputDecorationTheme,
+  );
 }

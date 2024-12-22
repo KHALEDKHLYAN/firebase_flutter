@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
+import '../../../../constants/color.dart';
 import '../../../../constants/image_string.dart';
 import '../../../../constants/sizes.dart';
 import '../../../../constants/text_strings.dart';
@@ -29,6 +29,19 @@ class SplashScreen extends StatelessWidget {
                   Text(appTagLine,style: Theme.of(context).textTheme.headlineMedium),
                 ],
               )
+            ),
+            Positioned(
+              bottom:150,
+              child: Image(image: AssetImage(splashImage)),
+            ),
+            Positioned(
+              bottom:40,
+              right:defaultSizes,
+              child: Container(
+                width: splashContainerSizes,
+                height:splashContainerSizes,
+                color: primaryColor,
+              ),
             ),
           ]
         ),
