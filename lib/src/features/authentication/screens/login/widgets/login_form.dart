@@ -1,9 +1,11 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import '../../../../../constants/sizes.dart';
 import '../../../../../constants/text_strings.dart';
 import '../../forgetpassword/forgetpassword_option/forget_password_screen.dart';
+import '../../onboarding/screen/dashboard_screen.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({
@@ -52,7 +54,10 @@ class _LoginFormState extends State<LoginForm> {
           SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                  onPressed: () {}, child: Text(loginText.toUpperCase())))
+                  onPressed: () => Get.to(
+                        () => ChessBooksDashboard(),
+                      ),
+                  child: Text(loginText.toUpperCase())))
         ],
       ),
     ));
