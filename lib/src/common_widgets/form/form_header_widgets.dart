@@ -5,19 +5,24 @@ class FormHeaderWidgets extends StatelessWidget {
       {super.key,
       required this.image,
       required this.title,
-      required this.subTitle});
+      required this.subTitle,
+      this.crossAxisAlignment = CrossAxisAlignment.start,
+      this.heightBetween,
+      this.imageHeight = 0.2});
 
   final String image, title, subTitle;
+  final CrossAxisAlignment crossAxisAlignment;
+  final double? heightBetween;
+  final double imageHeight;
 
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Image(
           image: AssetImage(image),
-          height: 0.2 * size.height,
+          height: size.height*imageHeight,
         ),
         Text(
           title,

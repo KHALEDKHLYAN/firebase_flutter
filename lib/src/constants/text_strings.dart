@@ -21,6 +21,14 @@ const String restPasswordviaPhone = 'Rest password via Phone-Number';
 const String forgetPhoneSubTitle = 'Enter Your registered Phone Number to receive OTP';
 const String forgetEmailSubTitle = 'Enter Your registered Email to receive OTP';
 
+//O-T-P 
+const String otpTitle = 'CO\nDE';
+const String otpSubTitle = 'Verification.';
+const String otpMessage = 'Enter The code sent at. .';
+
+
+
+
 
 
 

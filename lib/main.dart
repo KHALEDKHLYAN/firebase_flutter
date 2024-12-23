@@ -1,6 +1,6 @@
 import 'package:firebase_flutter/src/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:get/get.dart';
 import 'src/features/authentication/screens/welcome/welcome_screen.dart';
 
 void main() {
@@ -18,6 +18,8 @@ class MyApp extends StatelessWidget {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.system,
+      defaultTransition: Transition.leftToRightWithFade,
+      transitionDuration: Duration(microseconds: 500),
       home: WelcomeScreen(),
     );
   }
