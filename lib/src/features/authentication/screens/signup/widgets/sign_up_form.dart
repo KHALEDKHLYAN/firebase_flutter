@@ -1,4 +1,6 @@
+import 'package:firebase_flutter/src/features/authentication/screens/signup/controllers/signup_controllers.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import '../../../../../constants/sizes.dart';
 import '../../../../../constants/text_strings.dart';
 
@@ -9,12 +11,17 @@ class SignupFormWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(SignupController());
+    final formKey = GlobalKey<FormState>();
+
     return Container(
       padding: EdgeInsets.symmetric(vertical: formHeight - 10),
       child: Form(
+        key: formKey,
         child: Column(
           children: [
             TextFormField(
+              controller: controller.fullName,
               decoration: InputDecoration(
                 label: Text(fullName),
                 prefixIcon: Icon(Icons.person_outline_outlined),
@@ -22,6 +29,7 @@ class SignupFormWidget extends StatelessWidget {
             ),
             SizedBox(height: formHeight - 20),
             TextFormField(
+              controller: controller.email,
               decoration: InputDecoration(
                 label: Text(emailText),
                 prefixIcon: Icon(Icons.email_rounded),
@@ -29,15 +37,17 @@ class SignupFormWidget extends StatelessWidget {
             ),
             SizedBox(height: formHeight - 20),
             TextFormField(
+              controller: controller.phoneNo,
               decoration: InputDecoration(
                 label: Text(phoneNumber),
-                prefixIcon: Icon(Icons.numbers),
+                prefixIcon: Icon(Icons.call),
               ),
             ),
             SizedBox(height: formHeight - 20),
             TextFormField(
+              controller: controller.password,
               decoration: InputDecoration(
-                label: Text(phoneNumber),
+                label: Text(passWordText),
                 prefixIcon: Icon(Icons.fingerprint),
               ),
             ),
@@ -45,7 +55,14 @@ class SignupFormWidget extends StatelessWidget {
             SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                    onPressed: () {}, child: Text(signupText.toUpperCase())))
+                    onPressed: () {
+                      if (formKey.currentState!.validate()) {
+                        SignupController.instance.registerUser(
+                            controller.email.text.trim(),
+                            controller.password.text.trim());
+                      }
+                    },
+                    child: Text(signupText.toUpperCase())))
           ],
         ),
       ),
