@@ -2,7 +2,9 @@
 // ignore_for_file: sort_child_properties_last, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import '../../../models/books.dart';
+import '../../profile/profile_screen.dart';
 import '../widgets/responsive_grid_view.dart';
 
 class ChessBooksDashboard extends StatelessWidget {
@@ -40,6 +42,14 @@ class ChessBooksDashboard extends StatelessWidget {
         centerTitle: true,
         elevation: 0,
         backgroundColor: Colors.blueAccent,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.account_circle_rounded,
+                size: 45, color: Colors.yellow),
+            tooltip: 'Setting Icon',
+            onPressed: () =>Get.to(()=>ProfileScreen()),
+          ),
+        ],
       ),
       drawer: Drawer(
         child: ListView(

@@ -26,6 +26,39 @@ const String otpTitle = 'CO\nDE';
 const String otpSubTitle = 'Verification.';
 const String otpMessage = 'Enter The code sent at. .';
 
+//Profile
+const String profile = 'Profile';
+const String logOut = 'Log-Out';
+const String editProfile = 'Edit-Profile';
+const String profileHeading = 'Rereu Chessable';
+const String profileSubHeadings = 'chess.support@gmail.com';
+
+//Menu
+const String menu5 = 'mLog-Out';
+const String menu1 = 'settings';
+const String menu4 = 'Information';
+const String menu2 = 'Billing Details';
+const String menu3 = 'User Management';
+
+//--Update Profile Screen -Text
+const String delete = 'Delete';
+const String joined = 'Joined';
+const String joinedAt = '24th Dec 2025';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
